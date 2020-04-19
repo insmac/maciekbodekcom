@@ -1,0 +1,34 @@
+[
+  {
+    "id": "verifiable",
+    "title": "Verifiable.com",
+    "url": "https://verifiable.com",
+    "job_title": "Senior Frontend Engineer (Full Stack)",
+    "timespan": "from 07.2019",
+    "excerpt": "Verifiable is a complete system to issue, share and verify digital credentials using Blockchain for maximum authenticity and portability. <br />It offers a complete authoring and issuing toolkit, including a custom template builder, issuing management interface and an analytics subsystem."
+  },
+  {
+    "id": "dock",
+    "title": "Dock.io",
+    "url": "https://dock.io",
+    "job_title": "Senior Frontend Engineer (Full Stack)",
+    "timespan": "11.2017 - 07.2019",
+    "excerpt": "A decentralised professional user data exchange system based on Ethereum, creating an ability to share the professional history, recommendations and connections between hiring platforms."
+  },
+  {
+    "id": "remote",
+    "title": "Remote.com",
+    "url": "https://remote.com",
+    "job_title": "Senior Frontend Engineer",
+    "timespan": "11.2017 - 09.2019",
+    "excerpt": "Developing a SaaS app that connects remote workforce with full time and freelance jobs offering an AI-augmented talent matching system."
+  },
+  {
+    "id": "shortlist",
+    "title": "Shortlist.co",
+    "url": "https://shortlist.co",
+    "job_title": "Frontend Engineering Lead (Full Stack)",
+    "timespan": "08.2014 - 04.2018",
+    "excerpt": "In charge of development of a highly-scalable, performance-oriented SaaS platform aimed to streamline the freelance management and deliver the easiest and most convenient way to hire, manage and pay the freelancers. Participating in the entire process pipeline from client pitch, UX prototyping/mockups and actual development to platform deployment and QA. Managing a frontend engineering team of four."
+  }
+]
