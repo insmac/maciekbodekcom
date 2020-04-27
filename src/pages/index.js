@@ -46,9 +46,7 @@ const getBoundingPosition = event => {
 };
 
 const WelcomeTile = styled(Tile)`
-  color: white;
-  background: linear-gradient(120.47deg, #000000 0%, #27335E 100%);
-  padding: 30px;
+  padding: 0;
   
   ${Header2} {
     margin-bottom: 30px;
@@ -56,7 +54,17 @@ const WelcomeTile = styled(Tile)`
   
   @media ${media.medium} {
     min-height: 400px;
-    padding: 40px;
+    padding: 0;
+  }
+`;
+
+const WelcomeTileWrapper = styled.div`
+  padding: 30px;
+  color: white;
+  background: linear-gradient(120.47deg, #000000 0%, #27335E 100%);
+  
+  @media ${media.medium} {
+    padding: 60px;
   }
 `;
 
@@ -144,15 +152,17 @@ const IndexPage = ({data}) => {
       <SEO title="Home"/>
       <Tiles>
         <WelcomeTile>
-          <Header2>{welcomeText},</Header2>
-          <Paragraph>
-            I am a frontend engineer with more than thirteen years of experience working with digital agencies,
-            software houses and Silicon Valley startups.<br/><br/>
-            It also happens that I have more than a decade of remote work under my belt anywhere from
-            Pacific Standard Time to Australian Eastern.<br/><br/>
-            Below is a selection of my mostly product-oriented work of which I have been a part of.{' '}
-            Full details available upon request.
-          </Paragraph>
+          <WelcomeTileWrapper>
+            <Header2>{welcomeText},</Header2>
+            <Paragraph>
+              I am a frontend engineer with more than thirteen years of experience working with digital agencies,
+              software houses and Silicon Valley startups.<br/><br/>
+              It also happens that I have more than a decade of remote work under my belt anywhere from
+              Pacific Standard Time to Australian Eastern.<br/><br/>
+              Below is a selection of my mostly product-oriented work of which I have been a part of.{' '}
+              Full details available upon request.
+            </Paragraph>
+          </WelcomeTileWrapper>
         </WelcomeTile>
         <ContactTextTile centered>
           <ContactText>

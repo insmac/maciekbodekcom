@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import media from '../helpers/media';
+import isApple from '../helpers/is-apple';
 
 import {
   headerFont,
@@ -10,14 +11,14 @@ import {
 } from '../helpers/fonts';
 
 export const Paragraph = styled.p`
-  font-size: 16px;
+  font-size: ${isApple ? '18px' : '16px'};
   font-family: ${paragraphFont};
   font-weight: ${fontRegular};
   line-height: 175%;
   margin: 0;
   
   @media ${media.medium} {
-    font-size: 18px;
+    font-size: ${isApple ? '20px' : '18px'};
     line-height: 150%;
   }
 `;
