@@ -5,6 +5,7 @@ import { Tile } from '../components/grid';
 import media from '../helpers/media';
 import { Header2, Header3, Paragraph } from '../components/text';
 import ExternalLink from '../components/external-link';
+import externalLinkImage from '../images/external-link.svg';
 
 import productsConfig from '../configs/products';
 
@@ -94,8 +95,8 @@ export default function ProductTile({ product }) {
         <ProductTileImageBackground
           style={{ background: `linear-gradient(120.47deg, ${productsConfig[product.id].gradient[0]} 0%, ${productsConfig[product.id].gradient[1]} 100%)` }}
         />
-        <ExternalLink />
-        <img src={productsConfig[product.id].logo}/>
+        <ExternalLink src={externalLinkImage} alt="" />
+        <img src={productsConfig[product.id].logo} alt="" />
       </ProductTileImage>
       <ProductTileText>
         <ProductTileHeader>

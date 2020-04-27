@@ -6,17 +6,19 @@ import Img from 'gatsby-image';
 
 import Layout from '../components/layout';
 import SEO from '../components/seo';
-import { Header2, Header3, HeaderWrapper, Paragraph, AnchorLink } from '../components/text';
+import { Header2, HeaderWrapper, Paragraph } from '../components/text';
 import { Tile, Tiles } from '../components/grid';
 import media from '../helpers/media';
 import { black as fontBlack, bold as fontBold} from '../helpers/fonts';
 
 import Cvfile from '../../static/Maciek_Bodek_CV_2020.pdf';
 
-import AvatarImage from '../images/avatar.svg';
-
 import ProductTile from '../components/product-tile';
 import ExternalLink from '../components/external-link';
+import externalLinkImage from '../images/external-link.svg';
+
+import 'normalize.css';
+import '../components/base.css';
 
 const greetingText = () => {
   const now = moment();
@@ -59,7 +61,7 @@ const WelcomeTile = styled(Tile)`
 `;
 
 const ContactTextTile = styled(Tile)`
-  margin-top: 100px;
+  margin-top: 50px;
   
   @media ${media.medium} {
     margin-top: 0;
@@ -91,18 +93,25 @@ const CvLink = styled.a`
 `;
 
 const ProductTiles = styled(Tiles)`
-  margin-top: 100px;
+  margin-top: 50px;
   margin-bottom: 50px;
 `;
 
 const Photos = styled.a`
   position: relative;
-  margin: 50px 0;
+  margin: 25px 20px 50px;
+  padding: 0 20px;
+  box-sizing: border-box;
   width: 100%;
   cursor: pointer;
   
+  ${ExternalLink} {
+    right: 60px;
+  }
+  
   @media ${media.medium} {
-    margin: 100px 0;
+    margin: 50px 0 100px;
+    padding: 0 30px;
   }
   
   > img {
@@ -120,6 +129,10 @@ const Photos = styled.a`
 
 const Footer = styled(HeaderWrapper)`
   margin-bottom: 100px;
+  
+  ${Paragraph} {
+    font-size: 14px;
+  }
 `;
 
 const IndexPage = ({data}) => {
@@ -164,14 +177,14 @@ const IndexPage = ({data}) => {
       </ProductTiles>
       <HeaderWrapper>
         <Header2>Photography</Header2>
-        <Paragraph>Explore the portfolio of pictures I've been taking my entire adult life.</Paragraph>
+        <Paragraph>It's not just about programming. Explore the portfolio of pictures I've been taking my entire adult life.</Paragraph>
       </HeaderWrapper>
       <Photos href="https://maciek-bodek.squarespace.com">
-        <ExternalLink />
+        <ExternalLink src={externalLinkImage} alt="" />
         <Img fluid={mallorcaImage.childImageSharp.fluid} />
       </Photos>
       <Footer>
-        <img src={AvatarImage} />
+        <Paragraph>&copy; 2020 Maciek Bodek</Paragraph>
       </Footer>
     </Layout>
   );
@@ -191,7 +204,7 @@ export const pagequery = graphql`
         }
       }
     }
-    mallorcaImage: file(relativePath: { eq: "Mallorca_12_2018_img0008.jpg" }) {
+    mallorcaImage: file(relativePath: { eq: "Mallorca_12_2018_img0035.jpg" }) {
       childImageSharp {
         fluid(maxWidth: 1440, maxHeight: 939) {
           ...GatsbyImageSharpFluid

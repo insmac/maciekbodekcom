@@ -10,9 +10,6 @@ import PropTypes from 'prop-types';
 import { useStaticQuery, graphql } from 'gatsby';
 import styled from 'styled-components';
 
-import 'normalize.css';
-import './base.css';
-
 import {Header1} from './text';
 import {Section} from './grid';
 
@@ -49,7 +46,7 @@ const Layout = ({ children }) => {
   return (
     <Section>
       <Header>
-        <Header1>Maciek Bodek</Header1>
+        <Header1>{data.site.siteMetadata.title}</Header1>
       </Header>
       {children}
     </Section>
