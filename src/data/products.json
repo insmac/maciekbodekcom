@@ -1,5 +1,13 @@
 [
   {
+    "id": "primer",
+    "title": "Primer.io",
+    "url": "https://primer.io",
+    "job_title": "Lead UX / Frontend Engineer",
+    "timespan": "from 05.2020",
+    "excerpt": "Primer consolidates online payments stack with a unified API, and supercharges checkout with data driven insights.<br />"
+  },
+  {
     "id": "verifiable",
     "title": "Verifiable.com",
     "url": "https://verifiable.com",
